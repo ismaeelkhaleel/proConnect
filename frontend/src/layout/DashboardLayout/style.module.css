@@ -1,0 +1,126 @@
+.homeContainer {
+    display: flex;
+    height: 100vh;
+    flex: 1;
+}
+
+.homeContainer_leftBar {
+    display: flex;
+    flex: 0.2;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    border-right: 1px solid rgb(222, 222, 222);
+    padding-right: 1.2rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sideBarOption {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 1.2rem;
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sideBarOption:hover {
+    transform: scale(1.05);
+}
+
+.sideBarOption>svg {
+    height: 1.4em;
+    min-width: fit-content;
+}
+
+.homeContainer_extraContainer {
+    border-left: 1px solid rgb(222, 222, 222);
+    padding-left: 1.2rem;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    flex: 0.2;
+    width: 100%;
+}
+
+.homeContainer_feedConatiner {
+    padding-inline: 0.8rem;
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: none;
+    flex: 0.6;
+}
+.mobileNavBar {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    background-color: white;
+    position: sticky;
+}
+
+.mobileNavBar svg {
+     height: 2.2rem;
+     width: 2.2rem;
+     cursor: pointer;
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    .homeContainer_leftBar {
+        display: flex;
+        flex-direction: column;
+        flex: 0.1;
+        align-items: center;
+    }
+    .sideBarOption p {
+        display: none;
+    }
+
+    .homeContainer_extraContainer {
+         display: none;
+    }
+    .homeContainer_feedConatiner {
+        flex: 0.9;
+    }
+    
+}
+@media (min-width:768px) and (max-width:960px) {
+    .homeContainer_leftBar {
+        flex: 0.1;
+    }
+    .sideBarOption p {
+        display: none;
+    }
+
+    .homeContainer_extraContainer {
+       flex: 0.3;
+    }
+    .homeContainer_feedConatiner {
+        flex: 0.6;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .homeContainer_extraContainer {
+        display: none;
+    }
+    .homeContainer {
+        display: block;
+    }
+    .homeContainer_leftBar {
+        display: none;
+    }
+    .mobileNavBar {
+        display: flex;
+    }
+    
+} 
+

@@ -1,0 +1,74 @@
+###
+POST http://localhost:8800/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username":"aamir",
+    "password":"aamir",
+    "email":"aamir@gmail.com",
+    "name":"mohd aamir"
+}
+
+###
+POST http://localhost:8800/login HTTP/1.1
+content-Type: application/json
+
+{
+    "password":"aamir",
+    "email":"aamir@gmail.com"
+}
+
+###
+POST http://localhost:8800/login HTTP/1.1
+content-Type: application/json
+
+{
+    "password":"ismaeel",
+    "email":"ismaeel@gmail.com"
+}
+
+
+
+###
+GET http://localhost:8800/user/getConnectionRequests
+content-Type: application/json
+
+{
+    "token": "935704bc489e38be6ffcb400d11742cd7d1f1214c3a9802a9815219248a0bed96dc3976587ba4999ed53af29315cc465c33a987d8821a872176c04189b72cdec"
+}
+
+###
+POST http://localhost:8800/update_profile_data
+content-Type: application/json
+
+{
+    "token": "935704bc489e38be6ffcb400d11742cd7d1f1214c3a9802a9815219248a0bed96dc3976587ba4999ed53af29315cc465c33a987d8821a872176c04189b72cdec",
+    "bio":"i a nurse",
+    "currentPost":"nursing",
+    "pastWork":[
+        {
+            "company":"facebook",
+            "position":"CTO",
+            "years":"2+"
+        }
+    ],
+    "education":[
+        {
+            "school":"DU",
+            "degree":"GNM",
+            "fieldOfStudy":"2017-2019"
+        }
+    ]
+}
+
+###
+GET http://localhost:8800/get_all_user_profile
+
+###
+POST http://localhost:8800/delete_post
+content-Type: application/json
+
+{
+    "token": "ea7add83ba17e645d557192c6a0519c9b55d17036b30f01a06a241e10ae8a03bd047623e47c385dcd4db079b89564c4ea607b4e156ba128f3564098d334f4a17",
+    "post_id": "676f9df51db996ea010a97d8"
+}

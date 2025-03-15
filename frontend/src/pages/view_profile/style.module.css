@@ -1,0 +1,216 @@
+.container {
+    padding: 1.3rem;
+    background: rgb(247, 245, 245);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.backDropContainer {
+    width: 100%;
+    height: 30vh;
+    background: url("https://images.pexels.com/photos/830829/pexels-photo-830829.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+}
+
+.backDropContainer img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    left: 8%;
+    text-align: center;
+}
+
+.profileContainer_details {
+    padding-top: 6rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    background-color: rgb(237, 236, 236);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.card p {
+    padding: 0.5rem;
+}
+
+.card_profileContainer>img {
+    width: 100%;
+    object-fit: cover;
+    height: fit-content;
+}
+
+.connectBtn {
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background-color: rgba(3, 93, 183, 0.905);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.connectedButton {
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    outline: none;
+    border: 2px solid rgba(3, 93, 183, 0.905);
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.workHistory {
+    background-color: rgb(237, 236, 236);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.workHistoryContainer {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding-top: 0.4rem;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.workHistoryCard {
+    min-width: fit-content;  
+}
+.inputField {
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid silver;
+    width: 100%;
+}
+.optionsContainer {
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+     
+}
+
+.singleOption_optionsContainer {
+    flex-grow: 1;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.singleOption_optionsContainer>svg {
+    width: 20px;
+    cursor: pointer;
+}
+.commentsContainer {
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0,0,0,0.7);
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.allCommentsContainer {
+    width: 40vw;
+    max-height: 70vh; 
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.allCommentsContainer::-webkit-scrollbar {
+    display: none; 
+}
+.postCommentContainer {
+    position: absolute;
+    position: sticky;
+    bottom:0;
+    left: 1.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.8rem;
+    background-color: white;
+}
+.postCommentContainer>input {
+    flex: 0.8;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    border: none;
+    outline: none;
+    background-color: rgb(215, 214, 214);
+    border-radius: 10px;
+}
+.postCommentContainer>input:focus {
+    border: 1px solid grey;
+}
+.postCommentContainer_commentBtn>svg {
+    flex: 0.2;
+    width:fit-content;
+    height: 40px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+.singleComment {
+     margin-top: 1rem;
+     border-bottom: 1px solid;
+     padding: 0.5rem;
+}
+.singleComment_profileContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.card_profile {
+    display: flex;
+    padding-inline: 0.8rem;
+    padding-block: 0.5rem;
+}
+.card_profile > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media (min-width:600px) and (max-width:768px) {
+    .allCommentsContainer {
+        width: 70vw;
+    }
+    
+}
+@media (min-width:768px) and (max-width:960px) {
+    .allCommentsContainer {
+        width: 60vw;
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .allCommentsContainer {
+        width: 90vw;
+    }
+}
