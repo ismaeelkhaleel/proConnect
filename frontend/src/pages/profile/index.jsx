@@ -475,12 +475,12 @@ export default function ProfilePage() {
                           await dispatch(
                             decrementPostLike({ post_id: post._id })
                           );
-                          toast.success("Like Removed");
+                          toast.warning("Like Removed");
                         } else {
                           await dispatch(
                             incrementPostLike({ post_id: post._id })
                           );
-                          toast.warning("Like Added");
+                          toast.success("Like Added");
                         }
                         setIsLike(!isLike);
                         dispatch(getAllPosts());
