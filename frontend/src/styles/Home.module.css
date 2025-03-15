@@ -11,14 +11,7 @@
     padding-inline: 2rem;
     height: 80vh;
 }
-
-.mainContainer_left {
-    flex: 0.5;
-}
-
-.mainContainer_right {
-    flex: 0.5;
-}
+ 
 
 .mainContainer_left>p:nth-child(1) {
     font-size: 2.9rem;
@@ -46,4 +39,29 @@
     padding-inline: 1.2rem;
     padding-block: 0.6rem;
     border-radius: 20px;
+}
+
+@media (min-width:600px) and (max-width:768px) {
+    
+    .mainContainer_right img {
+        width: 80%;
+    }
+}
+@media (min-width:768px) and (max-width:960px) {
+    .mainContainer {
+        display: block;
+    }
+    .mainContainer_right img {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .mainContainer {
+        display: block;
+    }
+    .mainContainer_right img {
+        width: 80%;
+    }
 }

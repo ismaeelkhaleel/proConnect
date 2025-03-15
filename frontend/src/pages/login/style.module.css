@@ -7,19 +7,18 @@
 }
 
 .cardContainer {
-    height: 80vh;
     display: flex;
     overflow: hidden;
     border-radius: 10px;
-    width: 80vw;
+    width: 40vw;
     background: white;
     box-shadow: 10px 10px 10px 10px rgb(173, 173, 173);
 }
 
 .cardContainer_left {
-    flex: 0.6;
     padding: 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .cardLeft_heading {
@@ -33,7 +32,7 @@
     justify-content: center;
     align-items: center;
     padding: 1.3rem;
-    max-width: 400px;
+    width: 100%;
     margin: 0 auto;
     gap: 1.2rem;
 }
@@ -50,6 +49,7 @@
 .inputRow {
     display: flex;
     gap: 1.2rem;
+    width: 100%;
 }
 
 .buttonWithOutline {
@@ -59,17 +59,36 @@
     border-radius: 10px;
     cursor: pointer;
 }
-
-.cardContainer_right {
-    flex: 0.4;
-    background: #e9725d;
+.changeMethod {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.2rem;
-    padding-inline: 1.2rem;
-    text-align: center;
+    gap: 1rem;
+}
+@media (min-width:600px) and (max-width:768px) {
+    .cardContainer {
+        width: 60vw;
+       }
+    
+}
+@media (min-width:768px) and (max-width:960px) {
+    .cardContainer {
+        width: 70vw;
+       }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+   .cardContainer {
+    width: 80vw;
+   }
+   .changeMethod {
+    display: block;
+   }
+   .inputRow {
+    display: block;
+   }
+   .inputRow input {
+    margin-top: 1.2rem;
+   }
 }

@@ -106,19 +106,15 @@ function LoginComponent() {
                 <p> {userLoginMethod ? "Sign In" : "Sign Up"}</p>
               </div>
             </div>
-          </div>
-
-          <div className={styles.cardContainer_right}>
-            <div>
-              <p>Already have an account?</p>
+            <div  className={styles.changeMethod}>
+              <p>{userLoginMethod?"Don't have an account?":"Already Have an Account?"}</p>
               <div
-                style={{ color: "black", marginTop: "1.5rem" }}
                 onClick={() => {
                   setUserLoginMethod(!userLoginMethod);
                 }}
-                className={styles.buttonWithOutline}
+                
               >
-                <p> {userLoginMethod ? "Sign Up" : "Sign In"}</p>
+                <p style={{fontWeight:"bold", cursor:"pointer", color:"orange"}}> {userLoginMethod ? "Sign Up" : "Sign In"}</p>
               </div>
             </div>
           </div>
