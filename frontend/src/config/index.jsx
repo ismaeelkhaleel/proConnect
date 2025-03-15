@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "http://localhost:8800";
+export const BASE_URL = "https://proconnect-3s6l.onrender.com";
 
 const clientServer = axios.create({
     baseURL: BASE_URL,
