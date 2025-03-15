@@ -41,13 +41,13 @@ function LoginComponent() {
   const handleRegister = () => {
     console.log("Registering...");
     dispatch(registerUser({ username, password, email, name }));
-    toast(authState.message);
+    toast("Login Successfully");
   };
 
   const handleLogin = () => {
     console.log("Loging you...");
     dispatch(loginUser({email, password}));
-    toast(authState.message);
+    toast("Sign Up Successfully");
   };
 
   return (
