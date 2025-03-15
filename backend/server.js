@@ -15,7 +15,7 @@ app.use(userRoutes);
 app.use(express.static("uploads"));
 
 const start = async () => {
-    const connectDB = await mongoose.connect("mongodb+srv://pmohd367:LinkedinIsmaeel@linkedinclone.f9nxa.mongodb.net/?retryWrites=true&w=majority&appName=linkedinClone");
+    const connectDB = await mongoose.connect(process.env.MONGO_URL);
 
     app.listen(8800, () => {
         console.log("Server is running on port 8800");
