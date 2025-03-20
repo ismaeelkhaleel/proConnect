@@ -41,13 +41,11 @@ function LoginComponent() {
   const handleRegister = () => {
     console.log("Registering...");
     dispatch(registerUser({ username, password, email, name }));
-    toast("Login Successfully");
   };
 
   const handleLogin = () => {
     console.log("Loging you...");
     dispatch(loginUser({email, password}));
-    toast("Sign Up Successfully");
   };
 
   return (
@@ -97,8 +95,10 @@ function LoginComponent() {
                 onClick={() => {
                   if (userLoginMethod) {
                     handleLogin();
+                    toast.success("Login Successfull");
                   } else {
                     handleRegister();
+                    toast.success("Sign up Successfull");
                   }
                 }}
                 className={styles.buttonWithOutline}
